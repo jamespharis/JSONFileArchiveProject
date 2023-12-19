@@ -13,9 +13,9 @@ public class GetJSONarguments {
 	private String source;
 	private String dest;
 	private long days_old;
-	
-	
 	@SuppressWarnings("unchecked")
+	
+	//Constructor
 	public GetJSONarguments() 
 	{
 		//JSON parser object to parse read file
@@ -23,12 +23,12 @@ public class GetJSONarguments {
 		
 		try (FileReader reader = new FileReader("config.json"))
 		{
-			//Read JSON file
-            Object obj = jsonParser.parse(reader);
+            Object obj = jsonParser.parse(reader); // Read JSON file
 
             JSONObject configList = (JSONObject) obj;
             System.out.println(configList);
             
+            //Retrieve values from config.json
             this.source = (String) configList.get("sourcefolder");
             this.dest = (String) configList.get("destinationfolder");
             this.days_old = (long) configList.get("days_old");
@@ -38,16 +38,9 @@ public class GetJSONarguments {
 		catch (IOException e) { e.printStackTrace(); } 
 		catch (ParseException e) { e.printStackTrace(); }
 		}
-
-
-	public String getSource() {
-		return source;
-	}
-	public String getDest() {
-		return dest;
-	}
-	public long getDays_Old() {
-		return days_old;
-	}
-		
-	}
+	
+	//Create getters to return current instances
+	public String getSource() { return source; }
+	public String getDest() { return dest; }
+	public long getDays_Old() { return days_old; }		
+}
