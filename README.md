@@ -1,6 +1,6 @@
 # JSONFileArchiveProject
 
-Write a Program which will read a JSON file for program variables and move files from one folder to another which are over x-number of days old.
+Write a Java Program that will read a JSON file for program variables and move files from one folder to another which are over x-number of days old.
 
 The program should iterate through the files in the "Files" folder and for file older than the variable "days_old" should move the files to the "destinationfolder" location. You should be able to change the variable "days_old" and alter the files which get moved/archived. 
 
