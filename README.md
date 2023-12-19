@@ -7,3 +7,13 @@ The program should iterate through the files in the "Files" folder and for file 
 You will need to access system resources for folders and directories to perform this task.  ONLY Archive files, do not move any subfolders.
 
 The JSON file will specify 3 variables:  "sourcefolder",  "destinationfolder", and  "days_old"
+
+#Steps:
+ *  Retrieve values from JSON
+ *  Validate that source & destination are valid directories
+ *  Days_old Date Calculation
+ *  Iterate through source directory [LOOP]
+ *  For each object in the source directory, Declare path as file object (allows us to run properties on each file)
+ *  Verify that it is a file (not directory)
+ *  Evaluate file properties for date/time (last modified date)
+ *  If qualifies, move file. If not, go to next file.
